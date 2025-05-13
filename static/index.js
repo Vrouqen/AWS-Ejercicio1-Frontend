@@ -1,6 +1,8 @@
+const ip ='34.203.234.104:666';
+
 document.addEventListener("DOMContentLoaded", async () => {
     // Obtiene la ip de donde carga el front
-    const backendURL = `http://${window.location.hostname}:8081/users/load_users`;
+    const backendURL = `http://${ip}/users/load_users`;
     const users = await fetch(backendURL);
     
     const usersjson = await users.json();

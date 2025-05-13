@@ -1,3 +1,5 @@
+const ip ='34.203.234.104:666';
+
 // Detecta cuando se envía el formulario
 document.getElementById("userform").addEventListener("submit", async (e) => {
     e.preventDefault(); // Evita que se envía el formulario normalmente
@@ -10,7 +12,7 @@ document.getElementById("userform").addEventListener("submit", async (e) => {
     formData.append("description", document.getElementById("description").value);
 
     // Se obtiene la respuesta haciendo una solicitud al metodo post para insertar un usuario
-    const backendURL = `http://${window.location.hostname}:8081/users/insert_user`;
+    const backendURL = `http://${ip}/users/insert_user`;
     const response = await fetch(backendURL, { 
         method: "POST",
         body: formData

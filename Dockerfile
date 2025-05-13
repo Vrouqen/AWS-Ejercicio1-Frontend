@@ -10,7 +10,7 @@ COPY . .
 # Instalar las dependencias listadas en requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Exponer el puerto 8080
+# Exponer el puerto 667
 EXPOSE 667
 
 # Comando para ejecutar la aplicación (suponiendo que el archivo principal se llama 'app.py')
